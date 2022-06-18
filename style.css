@@ -1,0 +1,116 @@
+body{
+    
+    background-color: #fafafa;
+}
+#header{
+        border:2px solid black;
+    background-color: #195b8a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#header h1{
+    font-size: 50px;padding: 20px;
+    text-align: center;
+    color: beige;
+    font-size: 30px;
+}
+
+
+#awnseria{
+    margin-top: 20px;
+    background-color: #a71818;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border:2px solid black;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#awnseria h1{
+    font-size: 50px;padding: 20px;
+    text-align: center;
+    color: beige;
+    font-size: 30px;
+}
+
+#player{
+    margin-top: 20px;
+    background-color: #a71818;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border:2px solid black;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-right: 30px;}
+#player button{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: beige;
+    border:2px solid black;
+    
+}
+#player button:hover{
+    background-color: #195b8a;
+    color: beige;
+}
+#score{
+    margin-top: 20px;
+    background-color: #a71818;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border:2px solid black;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#score table{
+    font-size: 30px;
+    border:3px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#score table tr{
+    border:3px solid black;
+    padding: 10px;
+    background-color: #195b8a;
+    color: beige;
+}
+#score table tr td{
+    border:3px solid black;
+    padding: 10px;
+    background-color: #195b8a;
+    color: beige;
+}
+#start{
+    margin-top: 20px;
+    background-color: #a71818;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border:2px solid black;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#start button{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: beige;
+    border:2px solid black;
+    
+}
+#start button:hover{
+    background-color: #195b8a;
+    color: beige;
+}

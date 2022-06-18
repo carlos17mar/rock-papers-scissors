@@ -4,11 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="game.js"></script>
-
+    
+    <link rel="stylesheet" href="style.css"> 
     <title>Document</title>
 </head>
 <body>
+    <div id="game"></div>
+    <ls>
+   <div id="header">
+    <h1>Piedra, papel y tijeras</h1>
+        </div>
+    <div id="awnseria">
+        </div>
+        
+    <div id="player">
+        <ls>
+    <button id="ROCK">Piedra</button>
+    <button id="SCISSORS">Tijeras</button>
+    <button id="PAPER">Papel</button>
+        </div>
+        <div id = "score">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>JUGADOR</td>
+                        <td>MAQUINA</td>
+                    </tr>
+                    <tr id = "scores">
+                        <td id="playerScore"></td>
+                        <td id="computerScore"></td>
+                    </tr>
+                </tbody>
 
-</body>
+
+            </table>
+
+              
+        </div>
+        <div id ="start">
+            <button id = "begin">Jugar</button>
+        </div>
+    </div>
+
+
+    <script src="game.js"></script>
+<body>
 </html>
