@@ -2,8 +2,12 @@ let scoreMachine = 0;
 let scoreHuman = 0;
 
 
-let tabla = document.getElementById('score');
 
+
+
+
+
+    function computerPlay(){
     
         let output = (Math.random()*2);
 
@@ -15,14 +19,18 @@ let tabla = document.getElementById('score');
     function computerDisplay(compPlay){
     const awnser = document.getElementById('awnseria');
     const display = document.createElement('h3');
-    display.innerHTML = `The computer plays ${compPlay}`; 
+    display.innerHTML = `The computer plays ${compPlay}`;
+
+    
     awnser.appendChild(display);
+
     }
 
 
 
 
     function round(player1,player2){
+        
         let win = 'win';
         let lost = 'lost';
         let computer = player2;
@@ -74,10 +82,14 @@ let tabla = document.getElementById('score');
                             console.log("Its a tie");
         
                             break;  
+
+
+
         }
     }
     }
     function game(player1){
+       
      let computerMove = computerPlay();
         let result = round(player1,computerMove);   
         
@@ -100,18 +112,53 @@ let tabla = document.getElementById('score');
             scoreHuman = 0;
             scoreMachine = 0;
         };
+        tablescore();
         console.log(`Your score is ${scoreHuman} and the computer score is ${scoreMachine}`); 
        
     }
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button =>{
+    
         button.addEventListener('click',() =>{
-//            alert(button.id);
+          
+if(button.id === "begin"){
+    tablescore();
+    buttons.forEach(button =>{
+        button.addEventListener('click',()=>{
+            game(button.id);
+        })
+    });
+}             
             
-
-                game(button.id);
-            
+           // game(button.id);                                       
         });
     });
-  
+  function tablescore(){
+    const tablediv = document.getElementById('score');
+    let table = document.createElement('table');
+    let thead = document.createElement('thead');
+    let tbody = document.createElement('tbody');
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    document.getElementById('score').appendChild(table);
+    tablediv.append(table);
+    let players = document.createElement('tr');
+    let player1 = document.createElement('td');
+    player1.innerHTML = 'Computer'
+    let machine = document.createElement('td');
+    machine.innerHTML = 'You';
+    players.appendChild(machine);
+    players.appendChild(player1);
+    thead.appendChild(players);
+    
+    let scors = document.createElement('tr');
+    let human = document.createElement('td');
+    human.innerHTML = scoreHuman;
+    let machi = document.createElement('td');
+    machi.innerHTML = scoreMachine;
+    scors.appendChild(human);
+    scors.appendChild(machi);
+    tbody.appendChild(scors);}
+
+    
