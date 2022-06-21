@@ -112,7 +112,6 @@ let scoreHuman = 0;
             scoreHuman = 0;
             scoreMachine = 0;
         };
-        tablescore();
         console.log(`Your score is ${scoreHuman} and the computer score is ${scoreMachine}`); 
        
     }
@@ -127,6 +126,14 @@ if(button.id === "begin"){
     buttons.forEach(button =>{
         button.addEventListener('click',()=>{
             game(button.id);
+
+           const humanUpdate =  document.querySelector('#human-score');
+           humanUpdate.innerHTML = scoreHuman;
+           const machineUpdate = document.querySelector('#machine-score');
+           machineUpdate.innerHTML = scoreMachine;
+
+
+
         })
     });
 }             
@@ -154,9 +161,12 @@ if(button.id === "begin"){
     
     let scors = document.createElement('tr');
     let human = document.createElement('td');
+    human.setAttribute('id','human-score');
     human.innerHTML = scoreHuman;
     let machi = document.createElement('td');
+    machi.setAttribute('id','machine-score');
     machi.innerHTML = scoreMachine;
+
     scors.appendChild(human);
     scors.appendChild(machi);
     tbody.appendChild(scors);}
