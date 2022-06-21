@@ -1,6 +1,6 @@
 let scoreMachine = 0;
 let scoreHuman = 0;
-
+let numRounds = 0;
 
 
 
@@ -19,18 +19,16 @@ let scoreHuman = 0;
     function computerDisplay(compPlay){
     const awnser = document.getElementById('awnseria');
     const display = document.createElement('h3');
+    display.setAttribute('id','computer-awnser');
     display.innerHTML = `The computer plays ${compPlay}`;
-
-    
     awnser.appendChild(display);
 
     }
 
 
 
-
     function round(player1,player2){
-        
+        numRounds = numRounds+1;
         let win = 'win';
         let lost = 'lost';
         let computer = player2;
@@ -89,6 +87,10 @@ let scoreHuman = 0;
     }
     }
     function game(player1){
+        if(numRounds!=0){
+            const dispUpdate = document.querySelector('#computer-awnser');
+        dispUpdate.remove(); 
+        }
        
      let computerMove = computerPlay();
         let result = round(player1,computerMove);   
@@ -113,7 +115,9 @@ let scoreHuman = 0;
             scoreMachine = 0;
         };
         console.log(`Your score is ${scoreHuman} and the computer score is ${scoreMachine}`); 
-       
+         
+
+
     }
 
 const buttons = document.querySelectorAll('button');
@@ -131,6 +135,7 @@ if(button.id === "begin"){
            humanUpdate.innerHTML = scoreHuman;
            const machineUpdate = document.querySelector('#machine-score');
            machineUpdate.innerHTML = scoreMachine;
+
 
 
 
